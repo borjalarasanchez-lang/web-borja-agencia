@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,8 +11,14 @@ export function Footer() {
           
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center">
-                <span className="font-bold text-white text-sm">W</span>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <Image 
+                  src="/images/logo.svg" 
+                  alt="WebLogic Logo" 
+                  width={32} 
+                  height={32} 
+                  className="object-contain"
+                />
               </div>
               <span className="font-sans text-lg font-bold text-zinc-100">WebLogic</span>
             </Link>

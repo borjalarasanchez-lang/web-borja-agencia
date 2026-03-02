@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -36,9 +37,14 @@ export function Navbar() {
       
       <div className="flex h-full max-w-7xl mx-auto items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 shadow-lg shadow-purple-900/20 group-hover:scale-105 transition-transform duration-300">
-            <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <span className="font-bold text-white text-xl relative z-10">W</span>
+          <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg bg-black group-hover:scale-105 transition-transform duration-300">
+            <Image 
+              src="/images/logo.svg" 
+              alt="WebLogic Logo" 
+              width={40} 
+              height={40} 
+              className="object-contain p-1"
+            />
           </div>
           <span className="font-sans text-xl font-bold tracking-tight text-white group-hover:text-blue-200 transition-colors">
             WebLogic
